@@ -1,0 +1,13 @@
+---
+server:
+  port: 8002
+
+spring:
+  devtools:
+    add-properties: true
+  main:
+    banner-mode: off
+  application:
+    name: user-service
+
+...
