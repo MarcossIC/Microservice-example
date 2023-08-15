@@ -6,8 +6,7 @@ spring:
     config:
       server:
         git:
-          default-label: main
-          uri: https://github.com/MarcossIC/Microservice-example
+          uri: https://github.com/MarcossIC/Microservice-example.git
           search-path: config-data
   main:
     banner-mode: off

@@ -1,5 +1,6 @@
 ---
 spring:
+  banner-mode: off
   application:
     name: user-service
   cloud:
