@@ -7,7 +7,7 @@ spring:
       server:
         git:
           uri: https://github.com/MarcossIC/Microservice-example.git
-          search-path: config-data
+          search-path: /config-data/
   main:
     banner-mode: off
   application:
