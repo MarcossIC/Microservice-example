@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @FeignClient(name = "car-service", url = "http://localhost:8002")
-@RequestMapping("/cars")
 public interface CarFeignClient {
-    @PostMapping
+    @PostMapping(value = "/api/v1/cars")
     Void saveCar(@RequestBody CarSaveDTO dto);
 }

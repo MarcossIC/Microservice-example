@@ -1,0 +1,19 @@
+---
+server:
+  port: 8081
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/MarcossIC/Microservice-example
+          search-path: config-data
+  devtools:
+    add-properties: true
+  main:
+    banner-mode: off
+  application:
+    name: config-service
+...
