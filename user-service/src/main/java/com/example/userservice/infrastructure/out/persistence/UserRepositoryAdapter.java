@@ -7,6 +7,7 @@ import com.example.userservice.domain.model.UserSaveDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -35,8 +36,9 @@ public class UserRepositoryAdapter implements UserRepository {
     }
 
     @Override
-    public void saveUser(UserSaveDTO userSaveDTO) {
-        jpaRepository.save( mapperSaveUser.apply(userSaveDTO) );
+    public User saveUser(UserSaveDTO userSaveDTO) {
+        var user =jpaRepository.save( mapperSaveUser.apply(userSaveDTO) );
+        return userMapper.apply(user);
     }
 
 

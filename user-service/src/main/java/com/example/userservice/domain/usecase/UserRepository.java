@@ -11,6 +11,5 @@ public interface UserRepository {
 
     User getUserById(final Long ID);
 
-
-    void saveUser(final UserSaveDTO userSaveDTO);
+    User saveUser(final UserSaveDTO userSaveDTO);
 }

@@ -1,4 +1,4 @@
-package com.example.userservice.infrastructure.out.rest;
+package com.example.userservice.infrastructure.out.clients.resttemplate;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("api/v1/cars")
 @RequiredArgsConstructor
-public class RetrieveByUserId {
+public class RetrieveByUserIdRest {
     private final RetrieveByUserIdService service;
 
     @GetMapping("/users/{id}")
