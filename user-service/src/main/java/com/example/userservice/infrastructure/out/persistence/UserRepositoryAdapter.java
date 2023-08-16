@@ -2,12 +2,10 @@ package com.example.userservice.infrastructure.out.persistence;
 
 import com.example.userservice.domain.usecase.UserRepository;
 import com.example.userservice.domain.model.User;
-import com.example.userservice.domain.model.UserEntity;
 import com.example.userservice.domain.model.UserSaveDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;

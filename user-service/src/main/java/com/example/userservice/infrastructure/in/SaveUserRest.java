@@ -15,7 +15,6 @@ import java.util.Set;
 @RequestMapping("api/v1/users")
 @RequiredArgsConstructor
 public class SaveUserRest {
-
     private final SaveUserService service;
 
     @PostMapping

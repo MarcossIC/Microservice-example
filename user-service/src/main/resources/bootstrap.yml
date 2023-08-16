@@ -7,4 +7,7 @@ spring:
     config:
       enabled: true
       uri: http://localhost:8081
+      name: config-service
+  profiles:
+    active: default
 ...

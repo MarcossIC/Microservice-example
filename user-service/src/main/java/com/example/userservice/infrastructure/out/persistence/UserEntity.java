@@ -1,4 +1,4 @@
-package com.example.userservice.domain.model;
+package com.example.userservice.infrastructure.out.persistence;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -32,6 +32,4 @@ public class UserEntity implements Serializable {
 
     @Column(name = "password", nullable = false, length = 128)
     private String password;
-
-
 }
