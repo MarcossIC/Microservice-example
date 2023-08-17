@@ -7,5 +7,5 @@ spring:
   application:
     name: user-service
   config:
-    import: "optional:configserver:http://localhost:8082"
+    import: "optional:configserver:config-server-production-b9e3.up.railway.app"
 ...
