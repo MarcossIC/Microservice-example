@@ -11,7 +11,7 @@ spring:
 eureka:
   instance:
     #Host donde se esta corriendo el servidor
-    hostname: localhost
+    hostname: microservice-example-production.up.railway.app
   client:
     register-with-eureka: false
     fetch-registry: false
