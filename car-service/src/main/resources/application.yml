@@ -1,4 +1,38 @@
 ---
+server:
+  port: 8002
+  error:
+    include-message: always
+    include-binding-errors: always
+
+#Configuracion del log
+logging:
+  level:
+    root: INFO
+    web: DEBUG
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+  pattern:
+    dateformat: HH:mm:ss
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: https://microservice-example-production.up.railway.app/eureka
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
 spring:
   devtools:
     add-properties: true
@@ -6,6 +40,4 @@ spring:
     banner-mode: off
   application:
     name: car-service
-  config:
-    import: "optional:configserver:http://localhost:8082"
 ...

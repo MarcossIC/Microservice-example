@@ -10,14 +10,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableDiscoveryClient
 public class CarServiceApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(CarServiceApplication.class, args);
-    }
-
-    @LoadBalanced
-    @Bean
-    RestTemplate restTemplate() {
-        return new RestTemplate();
     }
 }
