@@ -7,17 +7,15 @@ spring:
     banner-mode: off
   application:
     name: eureka-server
-
 eureka:
   instance:
     #Host donde se esta corriendo el servidor
-    hostname: microservice-example-production.up.railway.app
+    hostname: https://microservice-example-production.up.railway.app
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-
+      defaultZone: ${eureka.instance.hostname}:${server.port}/eureka/
 management:
   endpoints:
     web:
