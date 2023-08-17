@@ -10,8 +10,6 @@ spring:
     banner-mode: off
   application:
     name: api-gateway
-  config:
-    import: "optional:configserver:http://localhost:8082"
   cloud:
     gateway:
       #discovery:
