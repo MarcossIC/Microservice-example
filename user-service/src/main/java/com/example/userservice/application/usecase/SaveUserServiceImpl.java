@@ -15,13 +15,14 @@ import org.springframework.stereotype.Service;
 public final class SaveUserServiceImpl implements SaveUserService {
     private final UserRepository repository;
     private final CarServerClient client;
+
     @Override
     public void saveUser(final UserSaveDTO userSaveDTO) {
         var user =repository.saveUser(userSaveDTO);
-        log.info(" CREE EL USER ");
+        log.info(" User Saved ");
 
         client.saveCar(new CarSaveDTO("fiat", "fiat 500", user.id().toString()));
 
-        log.info(" PASE EL SAVE CAR ");
+        log.info(" Default Car Saved ");
     }
 }

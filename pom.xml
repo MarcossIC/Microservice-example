@@ -15,10 +15,12 @@
 	</properties>
 
 	<modules>
+		<module>eureka-server</module>
+		<module>config-server</module>
+		<module>api-gateway</module>
 		<module>bike-service</module>
 		<module>user-service</module>
 		<module>car-service</module>
-		<module>config-service</module>
 	</modules>
 
 	<parent>

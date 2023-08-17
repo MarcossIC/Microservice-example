@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/v1/cars")
+@RequestMapping("/api/v1/cars")
 @RequiredArgsConstructor
 public class RetrieveCarByIdRest {
     private final RetrieveCarByIdService service;
 
     @GetMapping("/{id}")
-    public HttpEntity<Car> retrieveCarById(@PathVariable("id") Long id){
+    public HttpEntity<Car> retrieveCarById(@PathVariable("id") Long id) {
 
         return ResponseEntity.ok(service.getCarById(id));
     }

@@ -1,0 +1,38 @@
+---
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone=: http://localhost:8761/eureka
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: api-gateway
+  config:
+    import: "optional:configserver:http://localhost:8082"
+  cloud:
+    gateway:
+      #discovery:
+        #locator:
+          #enabled: true
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/v1/users/**
+        - id: car-service
+          uri: lb://car-service
+          predicates:
+            - Path=/api/v1/cars/**
+        - id: bike-service
+          uri: lb://bike-service
+          predicates:
+            - Path=/api/v1/bikes/**
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+...

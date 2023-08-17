@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public final class SaveCarUseCaseImp implements SaveCarService {
     private final CarRepository repository;
+
     @Override
     public void saveCar(final CarSaveDTO carSaveDTO) {
         repository.saveCar(carSaveDTO);

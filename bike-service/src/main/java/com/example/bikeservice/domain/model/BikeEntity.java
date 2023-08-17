@@ -27,7 +27,7 @@ public class BikeEntity implements Serializable {
     @Column(name = "brand", nullable = false, length = 60)
     private String brand;
 
-    @Column(name = "model", nullable = false, unique = true, length = 128)
+    @Column(name = "model", nullable = false, length = 128)
     private String model;
 
     @Column(name = "userId", nullable = false)

@@ -16,8 +16,8 @@ import java.util.stream.Collectors;
 public class CarRepositoryAdapter implements CarRepository {
     private final CarJpaRepository jpaRepository;
 
-    private static final Function<CarEntity, Car> entityToModel = entity-> new Car(entity.getId(), entity.getBrand(), entity.getModel(), entity.getUserId());
-    private static final Function<CarSaveDTO, CarEntity> dtoToEntity = dto-> new CarEntity(dto.brand(), dto.model(), dto.userId());
+    private static final Function<CarEntity, Car> entityToModel = entity -> new Car(entity.getId(), entity.getBrand(), entity.getModel(), entity.getUserId());
+    private static final Function<CarSaveDTO, CarEntity> dtoToEntity = dto -> new CarEntity(dto.brand(), dto.model(), dto.userId());
 
     @Override
     public Set<Car> getAllCars() {
@@ -31,19 +31,19 @@ public class CarRepositoryAdapter implements CarRepository {
     public Car getCarById(final Long ID) {
         return jpaRepository
                 .findById(ID).map(entityToModel)
-                .orElseThrow(()-> new RuntimeException("This UserID is not registered"));
+                .orElseThrow(() -> new RuntimeException("This UserID is not registered"));
     }
 
     @Override
     public Car getCarByUserId(String userId) {
         return jpaRepository.findByUserId(userId)
                 .map(entityToModel)
-                .orElseThrow(()-> new RuntimeException("This UserID is not registered"));
+                .orElseThrow(() -> new RuntimeException("This UserID is not registered"));
     }
 
     @Override
     public void saveCar(final CarSaveDTO userSaveDTO) {
-        jpaRepository.save( dtoToEntity.apply(userSaveDTO) );
+        jpaRepository.save(dtoToEntity.apply(userSaveDTO));
     }
 
 

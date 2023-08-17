@@ -9,14 +9,13 @@ import org.springframework.stereotype.Component;
 
 @Log4j2
 @Component
-@Primary
 @RequiredArgsConstructor
 public class CarServerFeign implements CarServerClient {
     private final CarFeignClient client;
 
     @Override
     public void saveCar(CarSaveDTO carSaveDTO) {
-        log.info("ENTRE AL METODO");
+        log.info("Save default car before User Saved ** With Feign ");
         client.saveCar(carSaveDTO);
     }
 }

@@ -20,7 +20,7 @@ public class SaveCarRest {
     private final SaveCarService service;
 
     @PostMapping
-    public HttpEntity<Void> saveCar(@RequestBody CarSaveDTO dto){
+    public HttpEntity<Void> saveCar(@RequestBody CarSaveDTO dto) {
         service.saveCar(dto);
         return ResponseEntity.created(URI.create("/api/v1/cars")).build();
     }

@@ -10,6 +10,7 @@ public interface CarRepository {
     Set<Car> getAllCars();
 
     Car getCarById(final Long ID);
+
     Car getCarByUserId(final String userId);
 
 
