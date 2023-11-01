@@ -111,7 +111,7 @@ While microservices-based architectures offer numerous advantages in terms of fl
       </p>
    </li>
       <li>
-      <h3>System complexity</h3>
+      <h3>Operating costs</h3>
       <p>
          The implementation and maintenance of a microservices architecture can be significantly more expensive than an application built on a normal architecture, due to the additional infrastructure requirements, monitoring tools and management of the complexity of the distributed environment.
       </p>
