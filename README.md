@@ -2,6 +2,12 @@
 
 ## :sparkles: Introduction
 This repository contains an API made in Spring boot that follows an architecture based on microservices.
+For this application we can find 5 microservices
+- Eureka Service: Service that acts as a discovery server for microservices
+- Gategay Service: Service that serves as an entry point to the rest of the microservices for security
+- Config Service: Service that serves as a configuration server, to have a centralized configuration system
+- Bike Service: Functional microservice used as an example for the project
+- Car Service: Functional microservice used as an example for the project
 
 ## 🛠 Stack
 <p align="left"> 
